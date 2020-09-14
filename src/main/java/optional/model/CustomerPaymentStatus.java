@@ -2,6 +2,6 @@ package optional.model;
 
 public enum CustomerPaymentStatus {
 
-	LIQUID, BANKRUPT
+	LIQUID, BANKRUPT, UNKNOWN
 	
 }
