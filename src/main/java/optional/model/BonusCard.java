@@ -22,5 +22,10 @@ public class BonusCard {
 	public int getNumberOfItems() {
 		return numberOfItems;
 	}
+	
+	public void increaseNumberOfItems(int orderedItems) {
+		numberOfItems += orderedItems;
+	}
+
 
 }
