@@ -11,11 +11,11 @@ public class OrderService {
 	}
 
 	public int calculateShippingFee(TicketCart cart) {
-		if (cart.getCustomer().isPresent()) {
-			if (cart.getCustomer().get().getAddress() != null) {
-				if (restCountriesAPI.isInCommonMarket(cart.getCustomer().get().getAddress().getCountry())) {
+		if (cart.getCustomer()!= null) {
+			if (cart.getCustomer().getAddress() != null) {
+				if (restCountriesAPI.isInCommonMarket(cart.getCustomer().getAddress().getCountry())) {
 					return 5;
-				} else if (restCountriesAPI.isInAmericas(cart.getCustomer().get().getAddress().getCountry())) {
+				} else if (restCountriesAPI.isInAmericas(cart.getCustomer().getAddress().getCountry())) {
 					return 15;
 				}
 

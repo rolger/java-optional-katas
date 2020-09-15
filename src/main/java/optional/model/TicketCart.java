@@ -11,8 +11,12 @@ public class TicketCart {
 	private Map<String, List<TicketItem>> tickets = new HashMap<String, List<TicketItem>>();
 	private Customer customer;
 
-	public Optional<Customer> getCustomer() {
+	public Optional<Customer> getCustomerOptional() {
 		return Optional.of(customer);
+	}
+
+	public Customer getCustomer() {
+		return customer;
 	}
 
 	public void setCustomer(Customer customer) {
