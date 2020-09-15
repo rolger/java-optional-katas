@@ -20,10 +20,7 @@ public class TicketCart {
 	}
 
 	public void addTicket(String reservationNumber, Category category) {
-		if (!tickets.containsKey(reservationNumber)) {
-			tickets.put(reservationNumber, new ArrayList<>());
-		}
-
+		tickets.putIfAbsent(reservationNumber, new ArrayList<>());
 		tickets.get(reservationNumber).add(new TicketItem(category));
 	}
 
