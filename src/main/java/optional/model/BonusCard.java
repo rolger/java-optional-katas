@@ -27,5 +27,4 @@ public class BonusCard {
 		numberOfItems += orderedItems;
 	}
 
-
 }
