@@ -1,24 +1,11 @@
 package optional;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import optional.model.Customer;
 
-public class CustomerRepository {
-	private Map<Long, Customer> customerRepo = new HashMap<>();
-	
-	public Customer read(Long id) {
-		return customerRepo.get(id);
-	}
+public interface CustomerRepository {
 
-	public Customer create(String name) {
-		Customer customer = new Customer(nextId(), name);
-		
-		return customerRepo.put(customer.getId(), customer);
-	}
+	public List<Customer> findAll();
 	
-	private Long nextId() {
-		return Long.valueOf(customerRepo.values().size());
-	}
 }
